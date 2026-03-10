@@ -71,6 +71,9 @@ RUN cd /home/node/.openclaw/extensions && \
   cd qqbot && \
   timeout 300 openclaw plugins install . || true && \
   timeout 300 openclaw plugins install @sunnoy/wecom || true && \
+  timeout 300 openclaw plugins install stock || true && \
+  timeout 300 openclaw plugins install stock-info-explorer || true && \
+  timeout 300 openclaw plugins install baidu-search-openclaw || true && \
   # 预执行安装命令（容器内需手动交互，此处仅作声明或环境准备）
   # feishu-plugin-onboard install && \
   find /home/node/.openclaw/extensions -name ".git" -type d -exec rm -rf {} + && \
